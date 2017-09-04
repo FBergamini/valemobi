@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-#Este programa cria um banco de dados SQLite3 para posterior manipulação de dados
+#Código feito em Python 2.7.1
+#Este código cria um banco de dados SQLite3 para posterior manipulação de dados
 
 import sqlite3
 import random
