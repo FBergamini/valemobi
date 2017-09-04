@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-#Este programa utiliza um banco de dados SQLite3 para manipulação de dados
+#Python 2.7
+#Este código utiliza um banco de dados SQLite3 para manipulação de dados
 #Foram utilizados comandos SQL para calcular a média e ordenar os clientes
 
 import sqlite3
