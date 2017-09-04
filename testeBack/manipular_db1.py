@@ -14,6 +14,7 @@ cursor.execute("""
     WHERE vl_total > 560 AND id_customer BETWEEN 1500 AND 2700;
 """)
 
+#cursor.fetchall() possui todos os registros retornados do comando SQL
 print 'Média: {0:.2f}'.format(cursor.fetchall()[0][0])
 
 #Seleciona os registros que atendem aos critérios em ordem decrescente
