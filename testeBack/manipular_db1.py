@@ -28,4 +28,5 @@ for linha in cursor.fetchall():
         linha[0], linha[1], linha[2], linha[3], linha[4]
     )
 
+#Encerra a conexão com o banco de dados
 conexao.close()
