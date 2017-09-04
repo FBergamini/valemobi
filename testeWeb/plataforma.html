@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<html>
+  <head>
+    <title>Plataforma de Transações</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+
+      // Função para validar as informações inseridas no formulários
+      // Verifica se todos os campos foram preenchidos, se um Tipo de Negócio foi selecionado e se os valores dos campos Quantidade e Preço são numéricos
+      // A função é chamada ao clicar no botão escrito 'Enviar' e, caso valide todos os itens, envia o formulário
+      function validarForm() {
+        var indice;
+        var elemento;
+        var checado = false;
+        for (indice in elementos) {
+          elemento = elementos[indice]
+          if (elemento.type == "text") {
+            if (elemento.value == "") {
+              alert("Todos os campos devem ser preenchidos.");
+              return;
+            }
+            if (elemento.name == "quant" || elemento.name == "preco") {
+              if (isNaN(elemento.value)) {
+                alert("Os campos 'Quantidade' e 'Preço' devem ser preenchidos com valores numéricos.");
+                return;
+              }
+            }
+          }
+          if (elemento.type == "radio") {
+            if (elemento.checked == true) {
+              checado = true;
+            }
+          }
+        }
+        if (checado == false) {
+          alert("Selecione um Tipo de Negócio para prosseguir.");
+          return;
+        }
+        document.getElementById("formTransacao").submit();
+      }
+    </script>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      // Cria uma lista de elementos com tag 'input' na página
+      var elementos = document.getElementsByTagName("input")
+    </script>
+
+    <h1>Nova transação</h1>
+
+    <form id="formTransacao" action="nova_transacao.php" method="post">
+      <table class="center" border="0">
+        <tr>
+          <td>Código da Mercadoria</td>
+          <td><input type="text" name="cod" maxlength="30" size="30"></td>
+        </tr>
+        <tr>
+          <td>Tipo da Mercadoria</td>
+          <td> <input type="text" name="tipoMerc" maxlength="30" size="30"></td>
+        </tr>
+        <tr>
+          <td>Nome da Mercadoria</td>
+          <td><input type="text" name="nome" maxlength="30" size="30"></td>
+        </tr>
+        <tr>
+          <td>Quantidade</td>
+          <td><input type="text" name="quant" maxlength="30" size="30"></td>
+        </tr>
+        <tr>
+          <td>Preço</td>
+          <td><input type="text" name="preco" maxlength="30" size="30"></td>
+        </tr>
+        <tr>
+          <td>Tipo do Negócio</td>
+          <td>
+            <form action="">
+              <input type="radio" name="tipoNeg" value="compra"> Compra
+              <input type="radio" name="tipoNeg" value="venda"> Venda
+            </form>
+          </td>
+        </tr>
+      </table>
+      <button class="centerButton" type="button" onclick="validarForm()">Enviar</button>
+    </form>
+    
+  </body>
+</html>
+

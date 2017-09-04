@@ -1,0 +1,19 @@
+body {
+    background-color: lavender;
+}
+
+h1 {
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 30%;
+    /*padding: 10px;*/
+}
+
+.centerButton {
+	padding: 5px 40px;
+	display: block;
+	margin: 0 auto;
+}
