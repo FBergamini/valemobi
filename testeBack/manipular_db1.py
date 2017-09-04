@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Python 2.7
+#Código feito em Python 2.7.1
 #Este código utiliza um banco de dados SQLite3 para manipulação de dados
 #Foram utilizados comandos SQL para calcular a média e ordenar os clientes
 
