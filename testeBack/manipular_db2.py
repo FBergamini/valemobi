@@ -28,6 +28,7 @@ clientes = []
 
 #Adiciona os clientes que atendem aos critérios à lista clientes
 #Soma os valores do saldo na variável soma
+#cursor.fetchall() possui todos os registros retornados do comando SQL
 for linha in cursor.fetchall():
     if linha[0] >= 1500 and linha[0] <= 2700 and linha[4] > 560:
         soma += linha[4]
@@ -44,5 +45,6 @@ for cliente in clientes:
     print 'ID: {} | CPF: {} | Nome: {} | Ativo: {} | Saldo: {}'.format(
             cliente.id, cliente.cpf, cliente.nome, cliente.ativo, cliente.saldo
         )
-
+    
+#Encerra a conexão com o banco de dados
 conexao.close()
