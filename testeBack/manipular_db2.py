@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-#Este programa utiliza um banco de dados SQLite3 para manipulação de dados
+#Código feito em Python 2.7.1
+#Este código utiliza um banco de dados SQLite3 para manipulação de dados
 #Foi utilizado comando SQL apenas para obter os dados da tabela e, em seguida, os manipular
 
 import sqlite3
